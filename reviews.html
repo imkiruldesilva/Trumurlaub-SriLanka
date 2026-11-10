@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Reviews | Traumurlaub Lanka - Guest Experiences & Testimonials</title>
+  <meta name="description" content="Read real reviews from global travelers who explored Sri Lanka with Traumurlaub Lanka and founder Nirosh. Authentic travel memories and verified experiences.">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <div id="scroll-progress"></div>
+  <canvas id="tropical-leaves-canvas"></canvas>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-contact">
+        <a href="tel:+94777978768"><i class="fa-solid fa-phone"></i> +94 777 978 768</a>
+        <a href="mailto:nirosh19@yahoo.com"><i class="fa-solid fa-envelope"></i> nirosh19@yahoo.com</a>
+        <span><i class="fa-solid fa-star" style="color: var(--accent-gold);"></i> 2,500+ Delighted Guests Worldwide</span>
+      </div>
+      <div class="top-bar-social">
+        <a href="https://wa.me/94777978768" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://www.facebook.com/100064179215325/videos/" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="mailto:traumurlaublanka.sl@gmail.com"><i class="fa-solid fa-at"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Sticky Navigation Header -->
+  <header class="main-header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="nav-brand">
+          <img src="assets/images/logo.png" alt="Traumurlaub Lanka Logo" class="nav-logo-img">
+          <div class="nav-logo-text">
+            <span class="title">Traumurlaub Lanka</span>
+            <span class="subtitle">Sri Lanka Travel Specialist</span>
+          </div>
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="tours.html" class="nav-link">Our Tours</a></li>
+          <li><a href="excursions.html" class="nav-link">Excursions</a></li>
+          <li><a href="destinations.html" class="nav-link">Destinations</a></li>
+          <li><a href="reviews.html" class="nav-link active">Reviews</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="contact.html" class="btn btn-primary btn-sm">Plan Your Trip</a>
+          <button class="hamburger-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="page-hero-bg">
+      <img src="assets/images/gallery/gallery-mirissa.jpg" alt="Mirissa Beach Sri Lanka - Actual Tropical Coast">
+    </div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content container">
+      <span class="subheading-badge" style="background: rgba(255,255,255,0.15); color: #FFFFFF; border-color: rgba(255,255,255,0.3);"><i class="fa-solid fa-heart"></i> Authentic Feedback</span>
+      <h1 class="page-hero-title reveal-fade-up">Guest Experiences & Travel Memories</h1>
+      <p class="page-hero-subtitle reveal-fade-up delay-1">
+        Real Journeys. Beautiful Memories. Happy Travelers.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Reviews Content Section -->
+  <section class="section-padding bg-cream">
+    <div class="container">
+
+      <!-- Dynamic Reviews Statistics Overview Card -->
+      <div class="reviews-summary-card reveal-fade-up">
+        <div class="overall-rating-box">
+          <div class="overall-score" id="stats-avg-score">5.0</div>
+          <div class="stars-display" style="font-size: 1.4rem; margin: 8px 0;">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div id="stats-total-count" style="font-weight: 700; color: var(--secondary); font-size: 1.05rem;">Verified Reviews</div>
+          <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Based on published traveler testimonials</div>
+        </div>
+
+        <div class="rating-breakdown">
+          <div class="breakdown-row">
+            <span class="breakdown-stars">5 Stars <i class="fa-solid fa-star" style="color: var(--accent-gold); font-size: 0.8rem;"></i></span>
+            <div class="breakdown-bar"><div class="breakdown-fill" id="bar-5-star" style="width: 100%;"></div></div>
+            <span class="breakdown-count" id="count-5-star">4</span>
+          </div>
+          <div class="breakdown-row">
+            <span class="breakdown-stars">4 Stars <i class="fa-solid fa-star" style="color: var(--accent-gold); font-size: 0.8rem;"></i></span>
+            <div class="breakdown-bar"><div class="breakdown-fill" id="bar-4-star" style="width: 0%;"></div></div>
+            <span class="breakdown-count" id="count-4-star">0</span>
+          </div>
+          <div class="breakdown-row">
+            <span class="breakdown-stars">3 Stars <i class="fa-solid fa-star" style="color: var(--accent-gold); font-size: 0.8rem;"></i></span>
+            <div class="breakdown-bar"><div class="breakdown-fill" id="bar-3-star" style="width: 0%;"></div></div>
+            <span class="breakdown-count" id="count-3-star">0</span>
+          </div>
+          <div class="breakdown-row">
+            <span class="breakdown-stars">2 Stars <i class="fa-solid fa-star" style="color: var(--accent-gold); font-size: 0.8rem;"></i></span>
+            <div class="breakdown-bar"><div class="breakdown-fill" id="bar-2-star" style="width: 0%;"></div></div>
+            <span class="breakdown-count" id="count-2-star">0</span>
+          </div>
+          <div class="breakdown-row">
+            <span class="breakdown-stars">1 Star <i class="fa-solid fa-star" style="color: var(--accent-gold); font-size: 0.8rem;"></i></span>
+            <div class="breakdown-bar"><div class="breakdown-fill" id="bar-1-star" style="width: 0%;"></div></div>
+            <span class="breakdown-count" id="count-1-star">0</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filter & Sort Bar -->
+      <div class="reviews-filter-bar reveal-fade-up">
+        <div class="filter-group">
+          <label for="filter-stars" style="font-weight: 600; font-size: 0.92rem;"><i class="fa-solid fa-filter"></i> Filter by Stars:</label>
+          <select id="filter-stars" class="form-control" style="width: auto; padding: 8px 14px; font-size: 0.9rem;">
+            <option value="all">All Ratings</option>
+            <option value="5">5 Stars Only</option>
+            <option value="4">4 Stars</option>
+            <option value="3">3 Stars</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="sort-reviews" style="font-weight: 600; font-size: 0.92rem;"><i class="fa-solid fa-arrow-down-short-wide"></i> Sort By:</label>
+          <select id="sort-reviews" class="form-control" style="width: auto; padding: 8px 14px; font-size: 0.9rem;">
+            <option value="recent">Most Recent</option>
+            <option value="highest">Highest Rated</option>
+            <option value="lowest">Lowest Rated</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Reviews Cards List Container (Populated dynamically by js/reviews.js) -->
+      <div id="reviews-list-container">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <!-- Review Submission Form Section -->
+      <div class="form-container reveal-fade-up" style="margin-top: 60px;">
+        <div class="text-center" style="margin-bottom: 34px;">
+          <span class="subheading-badge"><i class="fa-solid fa-pen"></i> Share Your Memory</span>
+          <h2 class="section-title">Leave a Review of Your Sri Lanka Journey</h2>
+          <p class="section-lead">Have you traveled with Nirosh and Traumurlaub Lanka? We would love to hear about your experience! Reviews are verified before publication.</p>
+        </div>
+
+        <div id="review-feedback" class="form-feedback"></div>
+
+        <form id="review-submission-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label">Your Full Name <span class="required">*</span></label>
+              <input type="text" name="customerName" class="form-control" placeholder="e.g. Thomas & Claudia Weber" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Country of Origin <span class="required">*</span></label>
+              <input type="text" name="country" class="form-control" placeholder="e.g. Germany, UK, Switzerland, France" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Email Address (Kept Private) <span class="required">*</span></label>
+              <input type="email" name="email" class="form-control" placeholder="name@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Tour Package or Excursion Taken</label>
+              <select name="tourPackage" class="form-control">
+                <option value="7 Nights / 8 Days Island Tour">7 Nights / 8 Days Island Adventure</option>
+                <option value="5 Nights / 6 Days Culture & Nature">5 Nights / 6 Days Highlights</option>
+                <option value="3 Nights / 4 Days Short Escape">3 Nights / 4 Days Short Escape</option>
+                <option value="One-Day Excursion">One-Day Excursion</option>
+                <option value="Customized Sri Lanka Tour">Customized Sri Lanka Tour</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Travel Date / Month</label>
+              <input type="text" name="travelDate" class="form-control" placeholder="e.g. October 2026">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Overall Star Rating <span class="required">*</span></label>
+              <div class="star-rating-select" id="star-picker">
+                <i class="fa-solid fa-star active" data-value="1"></i>
+                <i class="fa-solid fa-star active" data-value="2"></i>
+                <i class="fa-solid fa-star active" data-value="3"></i>
+                <i class="fa-solid fa-star active" data-value="4"></i>
+                <i class="fa-solid fa-star active" data-value="5"></i>
+              </div>
+              <input type="hidden" id="selected-rating" name="rating" value="5">
+            </div>
+
+            <div class="form-group col-span-2">
+              <label class="form-label">Review Headline / Title <span class="required">*</span></label>
+              <input type="text" name="reviewTitle" class="form-control" placeholder="e.g. Magical 8 Days Exploring Sigiriya, Ella and Yala Safari!" required>
+            </div>
+
+            <div class="form-group col-span-2">
+              <label class="form-label">Your Review Message <span class="required">*</span></label>
+              <textarea name="reviewMessage" class="form-control" rows="5" placeholder="Share your experience traveling with Nirosh, the vehicles, places visited, and hospitality..." required></textarea>
+            </div>
+          </div>
+
+          <div style="margin-top: 28px; text-align: center;">
+            <button type="submit" class="btn btn-primary btn-lg"><i class="fa-solid fa-paper-plane"></i> Submit Your Review</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Global Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-about">
+          <img src="assets/images/logo.png" alt="Traumurlaub Lanka Official Logo" class="footer-logo-img">
+          <p class="footer-desc">
+            Traumurlaub Lanka helps international visitors discover the true beauty of Sri Lanka through personalized tours, cultural wonders, wildlife safaris, and tropical beaches. Led by Nirosh with ~15 years of tourism excellence.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://wa.me/94777978768" target="_blank" rel="noopener" class="footer-social-btn"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.facebook.com/100064179215325/videos/" target="_blank" rel="noopener" class="footer-social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="mailto:nirosh19@yahoo.com" class="footer-social-btn"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <div class="footer-links-list">
+            <a href="index.html"><i class="fa-solid fa-angle-right"></i> Home</a>
+            <a href="about.html"><i class="fa-solid fa-angle-right"></i> About Us</a>
+            <a href="tours.html"><i class="fa-solid fa-angle-right"></i> Our Tours</a>
+            <a href="excursions.html"><i class="fa-solid fa-angle-right"></i> Excursions</a>
+            <a href="destinations.html"><i class="fa-solid fa-angle-right"></i> Destinations</a>
+            <a href="reviews.html"><i class="fa-solid fa-angle-right"></i> Guest Reviews</a>
+            <a href="contact.html"><i class="fa-solid fa-angle-right"></i> Contact Us</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Tour Packages</h4>
+          <div class="footer-links-list">
+            <a href="tours.html#tour-01"><i class="fa-solid fa-angle-right"></i> 3 Nights / 4 Days Tour</a>
+            <a href="tours.html#tour-02"><i class="fa-solid fa-angle-right"></i> 5 Nights / 6 Days Tour</a>
+            <a href="tours.html#tour-03"><i class="fa-solid fa-angle-right"></i> 7 Nights / 8 Days Tour</a>
+            <a href="excursions.html"><i class="fa-solid fa-angle-right"></i> Day Excursions</a>
+            <a href="contact.html?tour=customized"><i class="fa-solid fa-angle-right"></i> Custom Tour Request</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contact Nirosh</h4>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <strong>Phone / WhatsApp:</strong><br>
+                <a href="tel:+94777978768">+94 777 978 768</a>
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <strong>Direct Email:</strong><br>
+                <a href="mailto:nirosh19@yahoo.com">nirosh19@yahoo.com</a>
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-at"></i>
+              <div>
+                <strong>Company Email:</strong><br>
+                <a href="mailto:traumurlaublanka.sl@gmail.com">traumurlaublanka.sl@gmail.com</a>
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-brands fa-facebook"></i>
+              <div>
+                <strong>Facebook:</strong><br>
+                <a href="https://www.facebook.com/100064179215325/videos/" target="_blank" rel="noopener">Official Facebook Page</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Traumurlaub Lanka. All Rights Reserved. Founded by Nirosh.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="admin/login.html"><i class="fa-solid fa-lock"></i> Staff Login</a>
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Action -->
+  <a href="https://wa.me/94777978768?text=Hello%20Traumurlaub%20Lanka!%20I%20would%20like%20to%20inquire%20about%20your%20tours." target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat with Traumurlaub Lanka on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">Chat with Nirosh on WhatsApp</span>
+  </a>
+
+  <!-- AI Chatbot Trigger & Floating Widget -->
+  <button class="chatbot-trigger-btn" aria-label="Open Ask Traumurlaub AI Assistant">
+    <i class="fa-solid fa-robot"></i>
+    <span>Ask Traumurlaub AI</span>
+  </button>
+
+  <div class="chatbot-window" role="dialog" aria-label="Ask Traumurlaub AI Chat Window">
+    <div class="chatbot-header">
+      <div class="chatbot-header-info">
+        <div class="chatbot-avatar"><i class="fa-solid fa-compass"></i></div>
+        <div class="chatbot-header-text">
+          <h4>Ask Traumurlaub AI</h4>
+          <p>Your Personal Sri Lanka Travel Assistant</p>
+        </div>
+      </div>
+      <button class="chatbot-close-btn" aria-label="Close Chat"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="chatbot-body">
+      <div class="chat-bubble bot">
+        Ayubowan! Curious what previous guests have experienced with Nirosh and Traumurlaub Lanka? Ask me about our 15 years of customer service or tour feedback!
+      </div>
+      <div class="chat-quick-replies">
+        <span class="quick-chip" data-prompt="What do guests say about Nirosh?">About Nirosh's service</span>
+        <span class="quick-chip" data-prompt="Are your tours private or group tours?">Private vs Group tours</span>
+        <span class="quick-chip" data-prompt="Can I leave a review?">How to review</span>
+      </div>
+      <div class="chatbot-typing">
+        <div class="typing-dot"></div>
+        <div class="typing-dot"></div>
+        <div class="typing-dot"></div>
+      </div>
+    </div>
+    <div class="chatbot-footer">
+      <input type="text" class="chatbot-input" placeholder="Ask about guest reviews..." aria-label="Chat input">
+      <button class="chatbot-send-btn" aria-label="Send message"><i class="fa-solid fa-paper-plane"></i></button>
+    </div>
+  </div>
+
+  <button class="back-to-top" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/whatsapp.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script src="js/reviews.js"></script>
+</body>
+</html>

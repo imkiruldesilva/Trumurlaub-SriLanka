@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login | Traumurlaub Lanka</title>
+  <link rel="icon" type="image/png" href="../assets/images/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+      padding: 20px;
+    }
+    .login-card {
+      background: #FFFFFF;
+      width: 100%;
+      max-width: 440px;
+      padding: 44px 36px;
+      border-radius: var(--radius-lg);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(111, 175, 101, 0.3);
+      text-align: center;
+    }
+    .login-logo {
+      height: 65px;
+      margin: 0 auto 16px;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-card reveal-fade-up revealed">
+    <img src="../assets/images/logo.png" alt="Traumurlaub Lanka Official Logo" class="login-logo">
+    <h2 style="font-size: 1.6rem; color: var(--secondary); margin-bottom: 6px;">Staff Portal Login</h2>
+    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 26px;">
+      Traumurlaub Lanka Inquiries & Review Moderation
+    </p>
+
+    <div id="login-feedback" class="form-feedback"></div>
+
+    <form id="admin-login-form" style="text-align: left;">
+      <div class="form-group" style="margin-bottom: 18px;">
+        <label class="form-label">Username / Admin Email</label>
+        <div style="position: relative;">
+          <input type="text" name="username" class="form-control" placeholder="admin" required style="padding-left: 42px;">
+          <i class="fa-solid fa-user" style="position: absolute; left: 14px; top: 16px; color: var(--text-muted);"></i>
+        </div>
+      </div>
+
+      <div class="form-group" style="margin-bottom: 24px;">
+        <label class="form-label">Admin Password</label>
+        <div style="position: relative;">
+          <input type="password" name="password" class="form-control" placeholder="••••••••" required style="padding-left: 42px;">
+          <i class="fa-solid fa-lock" style="position: absolute; left: 14px; top: 16px; color: var(--text-muted);"></i>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="width: 100%; padding: 13px;">
+        <i class="fa-solid fa-right-to-bracket"></i> Sign In to Dashboard
+      </button>
+    </form>
+
+    <div style="margin-top: 24px; font-size: 0.85rem; color: var(--text-muted);">
+      <a href="../index.html" style="color: var(--primary); font-weight: 600;"><i class="fa-solid fa-arrow-left"></i> Return to Main Website</a>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('admin-login-form');
+      const feedback = document.getElementById('login-feedback');
+
+      // Check if already logged in
+      if (localStorage.getItem('traumurlaub_admin_token')) {
+        window.location.href = 'dashboard.html';
+      }
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const username = form.username.value.trim();
+        const password = form.password.value;
+        const btn = form.querySelector('button[type="submit"]');
+
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Authenticating...';
+
+        try {
+          const res = await fetch('/api/admin/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ username, password })
+          });
+
+          const data = await res.json();
+
+          if (res.ok && data.token) {
+            localStorage.setItem('traumurlaub_admin_token', data.token);
+            localStorage.setItem('traumurlaub_admin_user', data.user || 'Administrator');
+            window.location.href = 'dashboard.html';
+          } else {
+            throw new Error(data.message || 'Invalid username or password');
+          }
+        } catch (err) {
+          feedback.className = 'form-feedback error';
+          feedback.innerHTML = err.message || 'Login failed. Please verify credentials.';
+          feedback.style.display = 'block';
+        } finally {
+          btn.disabled = false;
+          btn.innerHTML = '<i class="fa-solid fa-right-to-bracket"></i> Sign In to Dashboard';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

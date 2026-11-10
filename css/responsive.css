@@ -1,0 +1,263 @@
+/* ===================================================================
+   TRAUMURLAUB LANKA – RESPONSIVE STYLESHEET
+   Breakpoints:
+   - Extra Large Desktops (1440px - 1920px+)
+   - Standard Desktops / Laptops (1024px - 1439px)
+   - Tablets (768px - 1023px)
+   - Mobile Devices (360px - 767px)
+   =================================================================== */
+
+/* Large Desktop (1440px+) */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1360px;
+  }
+  
+  .hero-title {
+    font-size: 4.8rem;
+  }
+}
+
+/* Medium Desktop / Small Laptop (1024px - 1200px) */
+@media (max-width: 1200px) {
+  .nav-menu {
+    gap: 18px;
+  }
+  
+  .nav-link {
+    font-size: 0.88rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .hero-title {
+    font-size: 3.6rem;
+  }
+
+  .footer-top {
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: 30px;
+  }
+}
+
+/* Tablet (768px - 1023px) */
+@media (max-width: 1023px) {
+  .top-bar {
+    display: none;
+  }
+
+  .hamburger-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 320px;
+    height: 100vh;
+    background: var(--secondary);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 90px 30px 40px;
+    gap: 22px;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.4);
+    transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1000;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .nav-link {
+    font-size: 1.1rem;
+    width: 100%;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .nav-actions .btn-sm {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.15rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .stat-item:not(:last-child)::after {
+    display: none;
+  }
+
+  .stat-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    padding-bottom: 20px;
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+  }
+
+  .reviews-summary-card {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .overall-rating-box {
+    border-right: none;
+    border-bottom: 1px solid var(--border-light);
+    padding-right: 0;
+    padding-bottom: 24px;
+  }
+
+  .footer-top {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+
+/* Mobile Devices (max-width: 767px) */
+@media (max-width: 767px) {
+  .section-padding {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 2.1rem;
+  }
+
+  .hero-section {
+    min-height: 85vh;
+  }
+
+  .hero-title {
+    font-size: 2.4rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+    margin-bottom: 28px;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+  }
+
+  .page-hero {
+    padding: 100px 0 60px;
+  }
+
+  .page-hero-title {
+    font-size: 2.3rem;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-container {
+    padding: 26px 18px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .form-group.col-span-2 {
+    grid-column: span 1;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 14px;
+  }
+
+  .footer-bottom-links {
+    justify-content: center;
+  }
+
+  /* Floating Widgets Mobile Tuning */
+  .whatsapp-float {
+    bottom: 20px;
+    right: 20px;
+    width: 54px;
+    height: 54px;
+    font-size: 28px;
+  }
+
+  .chatbot-trigger-btn {
+    bottom: 84px;
+    right: 20px;
+    padding: 0 16px;
+    height: 48px;
+  }
+
+  .chatbot-trigger-btn span {
+    font-size: 0.85rem;
+  }
+
+  .chatbot-window {
+    right: 10px;
+    left: 10px;
+    bottom: 140px;
+    width: auto;
+    height: 520px;
+  }
+
+  .back-to-top {
+    bottom: 20px;
+    left: 20px;
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* Extra Small Phones (360px - 390px) */
+@media (max-width: 390px) {
+  .hero-title {
+    font-size: 2.1rem;
+  }
+
+  .nav-logo-text .title {
+    font-size: 1.15rem;
+  }
+
+  .nav-logo-img {
+    height: 44px;
+  }
+
+  .stat-number {
+    font-size: 2.8rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.88rem;
+  }
+}

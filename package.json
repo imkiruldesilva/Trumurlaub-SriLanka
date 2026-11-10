@@ -1,0 +1,27 @@
+{
+  "name": "traumurlaub-lanka",
+  "version": "1.0.0",
+  "description": "Traumurlaub Lanka - Official Tourism Website for Sri Lanka Tours, Excursions, AI Chatbot and Inquiry System",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "node backend/server.js"
+  },
+  "keywords": [
+    "sri-lanka",
+    "tourism",
+    "traumurlaub-lanka",
+    "travel",
+    "sigiriya",
+    "ella",
+    "kandy",
+    "yala"
+  ],
+  "author": "Nirosh - Traumurlaub Lanka",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "nodemailer": "^6.9.13"
+  }
+}

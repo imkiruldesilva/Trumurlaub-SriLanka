@@ -1,0 +1,101 @@
+{
+  "inquiries": [
+    {
+      "id": "TL-507469",
+      "fullName": "Emma Watson",
+      "email": "emma.watson@example.co.uk",
+      "phone": "+44 7911 123456",
+      "country": "United Kingdom",
+      "arrivalDate": "2026-12-15",
+      "departureDate": "2026-12-23",
+      "adults": 2,
+      "children": 0,
+      "tourPackage": "7 Nights / 8 Days Island Tour",
+      "excursion": "",
+      "accommodation": "4-Star Superior Hotels",
+      "travelInterests": "Wildlife Safaris, Ceylon Tea Country, Beaches",
+      "budget": "$1,200",
+      "message": "Looking forward to touring Sigiriya, Ella, and Yala with Nirosh!",
+      "status": "new",
+      "created_at": "2026-11-10T08:31:47.469Z"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "rev-1794299507478",
+      "customerName": "Hans & Greta Müller",
+      "country": "Germany",
+      "email": "hans.m@example.de",
+      "tourPackage": "5 Nights / 6 Days Highlights",
+      "travelDate": "November 2026",
+      "rating": 5,
+      "title": "Superb tour in Kandy and Ella",
+      "message": "Nirosh was extremely helpful and punctual. Highly recommended!",
+      "status": "approved",
+      "created_at": "2026-11-10T08:31:47.478Z"
+    },
+    {
+      "id": "rev-1",
+      "customerName": "Thomas & Claudia Weber",
+      "country": "Germany",
+      "email": "thomas.weber@example.de",
+      "tourPackage": "7 Nights / 8 Days Island Tour",
+      "travelDate": "October 2026",
+      "rating": 5,
+      "title": "Unforgettable 8-Day Island Tour with Nirosh!",
+      "message": "Traumurlaub Lanka made our Sri Lankan holiday perfection! Nirosh was attentive, deeply knowledgeable about local history, wildlife in Yala, and showed us hidden viewpoints in Ella away from crowded spots. Exceptional hospitality!",
+      "status": "approved",
+      "created_at": "2026-10-26T08:31:43.844Z"
+    },
+    {
+      "id": "rev-2",
+      "customerName": "David Sterling",
+      "country": "United Kingdom",
+      "email": "david.sterling@example.co.uk",
+      "tourPackage": "5 Nights / 6 Days Highlights",
+      "travelDate": "September 2026",
+      "rating": 5,
+      "title": "Sigiriya, Kandy & Cultural Triangle Wonder",
+      "message": "Traveling with Nirosh felt like having an old friend show us his beautiful home island. Seeing wild elephant herds in Udawalawe and the sunrise over Sigiriya rock will stay in our hearts forever. Highly recommend Traumurlaub Lanka!",
+      "status": "approved",
+      "created_at": "2026-10-06T08:31:43.845Z"
+    },
+    {
+      "id": "rev-3",
+      "customerName": "Sophie Dubois",
+      "country": "France",
+      "email": "sophie.dubois@example.fr",
+      "tourPackage": "Customized Sri Lanka Tour",
+      "travelDate": "August 2026",
+      "rating": 5,
+      "title": "Magical Ella Train & Galle Fort Coastline",
+      "message": "The scenic hill country train to Demodara Nine Arch Bridge and the coastal charm of Galle Fort were breathtaking. Nirosh arranged lovely boutique stays and ensured every single transfer was seamless and stress-free.",
+      "status": "approved",
+      "created_at": "2026-09-06T08:31:43.845Z"
+    },
+    {
+      "id": "rev-4",
+      "customerName": "Marcus Lindner",
+      "country": "Austria",
+      "email": "marcus.lindner@example.at",
+      "tourPackage": "7 Nights / 8 Days Island Tour",
+      "travelDate": "July 2026",
+      "rating": 5,
+      "title": "Best Safari & Beach Holiday in Sri Lanka",
+      "message": "From the leopard sighting in Yala to relaxing on the golden beaches of Mirissa, every detail was carefully planned. Traumurlaub Lanka is the most genuine and trustworthy tour partner you could find.",
+      "status": "approved",
+      "created_at": "2026-08-12T08:31:43.845Z"
+    }
+  ],
+  "admin_users": [
+    {
+      "id": "admin-1",
+      "username": "admin",
+      "email": "nirosh19@yahoo.com",
+      "salt": "traum_lanka_secure_salt",
+      "password_hash": "5f08975356a653b74c434f631a8cd5b13b8822946ff4e11cce1971c883011cd10bd5b7305f5d68f88b6a43c802e7e37f342fe2ccf49f795585b2c11f8a9f7a48",
+      "role": "admin",
+      "created_at": "2026-11-10T08:31:43.846Z"
+    }
+  ]
+}
